@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
 import axios from "axios";
 
+const apiKey = process.env.REACT_APP_RAPID_API_API_KEY;
+
 class GlobalChart extends Component {
   state = { chartdata: {} };
 
@@ -33,8 +35,7 @@ class GlobalChart extends Component {
       "https://coronavirus-map.p.rapidapi.com/v1/summary/latest",
       {
         headers: {
-          "x-rapidapi-key":
-            "18cc263a6cmsh7ea31a309853f63p198dadjsn521b422d3823",
+          "x-rapidapi-key": apiKey,
           "x-rapidapi-host": "coronavirus-map.p.rapidapi.com",
         },
       }

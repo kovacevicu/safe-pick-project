@@ -20,6 +20,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../assets/styles.css";
 
 const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
+const apiKey = process.env.REACT_APP_RAPID_API_API_KEY;
 
 class Home extends Component {
   state = {
@@ -62,8 +63,7 @@ class Home extends Component {
       `https://covid-193.p.rapidapi.com/statistics?country=${country}`,
       {
         headers: {
-          "x-rapidapi-key":
-            "18cc263a6cmsh7ea31a309853f63p198dadjsn521b422d3823",
+          "x-rapidapi-key": apiKey,
           "x-rapidapi-host": "covid-193.p.rapidapi.com",
         },
       }
@@ -80,8 +80,7 @@ class Home extends Component {
       `https://covid-193.p.rapidapi.com/history?country=${country}`,
       {
         headers: {
-          "x-rapidapi-key":
-            "18cc263a6cmsh7ea31a309853f63p198dadjsn521b422d3823",
+          "x-rapidapi-key": apiKey,
           "x-rapidapi-host": "covid-193.p.rapidapi.com",
         },
       }
